@@ -7,17 +7,18 @@
     <script src="https://kit.fontawesome.com/dc9678cfdb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
     <title>Welcome To Sanket's Website</title>
 </head>
 <body>
     <div class="nav">
         <div class="navitems">
-            <a href="#home"><div class="navele">Home</div></a>
+            <a href="#intro"><div class="navele">Intro</div></a>
             <a href="#tech"><div class="navele">Tech</div></a>
             <a href="#proj"><div class="navele">Projects</div></a>
-            <a href="#learn"><div class="navele">Learning</div></a>
             <a href="#contact"><div class="navele">Contact</div></a>
         </div>
         <div class="menu-btn" style="transition: all .5s ease-in-out" onClick="toggleSideBar()">
@@ -27,10 +28,9 @@
     <div class="backdrop" onClick="sideBarClose()"></div>
     <div class="sidebar">
         <div class="list">
-            <a href="#home"><div class="navele">Home</div></a>
+            <a href="#intro"><div class="navele">Home</div></a>
             <a href="#tech"><div class="navele">Tech</div></a>
             <a href="#proj"><div class="navele">Projects</div></a>
-            <a href="#learn"><div class="navele">Learning</div></a>
             <a href="#contact"><div class="navele">Contact</div></a>
         </div>
     </div>
@@ -195,19 +195,102 @@
             </div>
         </div>
         <div class="section s3">
-            <h1>third section</h1>
+            <div class="heading">Projects</div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <a href="http://www.jcnnexecutives.com/" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc1">
+                            <div class="project_name">JCNN Executives</div>
+                            <div class="desc">Company Profile</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc2">
+                            <div class="project_name">Sports Shop</div>
+                            <div class="desc">Ecommerce</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                    <a href="https://sanket2604.github.io/Abja_Life/" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc3">
+                            <div class="project_name">Abja Life</div>
+                            <div class="desc">Ecommerce Design</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                    <a href="https://sanket2604.github.io/screenstation/index.html" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc4">
+                            <div class="project_name">Screen Station</div>
+                            <div class="desc">Company Profile</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc5">
+                            <div class="project_name">Plant Factory</div>
+                            <div class="desc">Ecommerce Design</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="swiper-slide">
+                        <div class="slider_card sc6">
+                            <div class="project_name">My First Website</div>
+                            <div class="desc">Personal Project</div>
+                            <div class="view_btn">View Website</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         <div class="section s4">
-            <h1>fourth section</h1>
-        </div>
-        <div class="section s5">
-            <h1>fifth section</h1>
+            <div class="heading">Contact me </div>
+            <div class="social">
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fas fa-mobile"></span>
+                </a>
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fas fa-envelope"></span>
+                </a>
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-whatsapp"></span>
+                </a>
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-instagram"></span>
+                </a>
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-linkedin-in"></span>
+                </a>
+            </div>
         </div>
     </div>
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

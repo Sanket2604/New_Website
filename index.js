@@ -1,8 +1,37 @@
 new fullpage('#fullpage',{
     autoScrolling:true,
     // scrollHorizontally: true
-    anchors: ['home','tech','proj','learn','contact'],
+    anchors: ['intro','tech','proj','contact'],
     navigation:true
+})
+
+var mySwiper = new Swiper('.mySwiper',{
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    disableOnInteraction: true,
+    coverflowEffect: {
+        rotate: 10,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
+    loop: true
+});
+
+$('.mySwiper').on('mouseenter', function(e){
+    console.log('stop autoplay');
+    mySwiper.stopAutoplay();
+})
+$('.mySwiper').on('mouseleave', function(e){
+    console.log('start autoplay');
+    mySwiper.startAutoplay();
 })
 
 function toggleSideBar(){
