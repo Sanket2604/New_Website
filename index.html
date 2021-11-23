@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc9678cfdb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome To Sanket's Website</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="navitems">
+            <a href="#home"><div class="navele">Home</div></a>
+            <a href="#tech"><div class="navele">Tech</div></a>
+            <a href="#proj"><div class="navele">Projects</div></a>
+            <a href="#learn"><div class="navele">Learning</div></a>
+            <a href="#contact"><div class="navele">Contact</div></a>
+        </div>
+        <div class="menu-btn" style="transition: all .5s ease-in-out" onClick="toggleSideBar()">
+            <div class="menu-btn_burger" style="transition: all .5s ease-in-out"></div>
+        </div>
+    </div>
+    <div class="backdrop" onClick="sideBarClose()"></div>
+    <div class="sidebar">
+        <div class="list">
+            <a href="#home"><div class="navele">Home</div></a>
+            <a href="#tech"><div class="navele">Tech</div></a>
+            <a href="#proj"><div class="navele">Projects</div></a>
+            <a href="#learn"><div class="navele">Learning</div></a>
+            <a href="#contact"><div class="navele">Contact</div></a>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section s1">
+            <div class="container-fluid">
+                <div class="row d-md-flex flex-md-row-reverse">
+                    <div class="col-12 col-md-6 col-lg-5">
+                        <div class="image_cont">
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-7">
+                        <div class="content_cont">
+                            <div class="heading">Welcome To My Website!</div>
+                            <div class="content">
+                                <div>My name is Sanket Banerjee.</div>
+                                <div>I AM A WEB DEVELOPER LIVING IN BANGALORE, INDIA.</div>
+                                <div>I make  web application using React. (MERN Stack)</div>
+                                <div class="download_cont">
+                                    <a href="Resume.pdf" download>Resume<i class="fas fa-file-download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section s2">
+            <div class="heading">Programming Langauges</div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang mongo">
+                            <div class="details">
+                                <img src="images/mongodb.svg" alt="" height="50px">
+                                <div class="name">MongoDB</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang exp">
+                            <div class="details">
+                                <img src="images/express.svg" alt="" height="45px">
+                                <div class="name">Express</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang react">
+                            <div class="details">
+                                <i class="fab fa-react"></i>
+                                <div class="name">React</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang node">
+                            <div class="details">
+                                <i class="fab fa-node-js"></i>
+                                <div class="name">NodeJS</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang html">
+                            <div class="details">
+                                <i class="fab fa-html5"></i>
+                                <div class="name">HTML</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang css">
+                            <div class="details">
+                                <i class="fab fa-css3-alt"></i>
+                                <div class="name">CSS</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang js">
+                            <div class="details">
+                                <i class="fab fa-js-square"></i>
+                                <div class="name">JavaScript</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="lang bootstrap">
+                            <div class="details">
+                                <i class="fab fa-bootstrap"></i>
+                                <div class="name">Bootstrap</div>
+                            </div>
+                            <div class="rating">
+                                <span>Proficiency: </span>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section s3">
+            <h1>third section</h1>
+        </div>
+        <div class="section s4">
+            <h1>fourth section</h1>
+        </div>
+        <div class="section s5">
+            <h1>fifth section</h1>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+</body>
+</html>
