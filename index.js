@@ -1,3 +1,5 @@
+AOS.init();
+
 new fullpage('#fullpage',{
     autoScrolling:true,
     // scrollHorizontally: true
@@ -19,20 +21,11 @@ var mySwiper = new Swiper('.mySwiper',{
         slideShadows: false,
     },
     autoplay: {
-        delay: 4000,
+        delay: 5000,
         disableOnInteraction: true,
     },
     loop: true
 });
-
-$('.mySwiper').on('mouseenter', function(e){
-    console.log('stop autoplay');
-    mySwiper.stopAutoplay();
-})
-$('.mySwiper').on('mouseleave', function(e){
-    console.log('start autoplay');
-    mySwiper.startAutoplay();
-})
 
 function toggleSideBar(){
     const menuBtn = document.querySelector('.menu-btn');
@@ -51,3 +44,24 @@ function sideBarClose(){
     document.querySelector('.menu-btn').classList.remove('open');
     document.querySelector('.backdrop').classList.remove('back');
 }
+
+
+
+
+let t1 = gsap.timeline({scrollTrigger:{
+    trigger:".s1",
+    start:"top 50%",
+}})
+.from('.h1', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.img1', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l1', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l2', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l3', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.download_cont', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+
+// let t2 = gsap.timeline({scrollTrigger:{
+//     trigger:".s2",
+//     start:"top 50%",
+// }})
+// .from('.h2', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+// .from('.lang', { y: '10px', opacity: 0, ease: 'power2'})
