@@ -35,16 +35,15 @@
   right: 0;
   height: inherit;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
+  z-index: 2;
+  object-position: center;
   transition: 0.5s ease-in-out;
 }
 .swiper-slide .slider_card:hover img{
   transform: scale(1.04);
 }
 .swiper-slide .slider_card .overlay{
-  z-index: 2;
   position: absolute;
   top: 0;
   bottom: 0;
