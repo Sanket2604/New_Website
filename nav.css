@@ -192,20 +192,20 @@ body{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(142, 255, 142, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     z-index: -1;
     transition: opacity 0.75s ease-in-out;
 }
 .backdrop.back{
     opacity: 1;
-    z-index: 3;
+    z-index: 4;
 }
 .sidebar{
     position: fixed;    
     width: 100%;
     opacity: 0;
-    background-color: rgba(0, 182, 61, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 4;
     color: white;
     transition: 0.75s ease-in-out;
@@ -214,59 +214,31 @@ body{
     overflow-x: hidden;
 }
 .sidebar.slide{
-    transform: translateY(65px);
+    transform: translateY(0px);
     opacity: 1;
 }
 .sidebar .list{
     display: flex;
     flex-direction: column;
 }
-.sidebar .list .listele{
-    padding: 20px;
+.sidebar .list .navele{
+    padding: 10px 30px;
     font-size: 18px;
-    font-weight: 500;
-    border-bottom: 2px solid white;
-    text-align: center;
+    border-bottom: 1px solid white;
 }
-.sidebar .list .listele{
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-.sidebar .list .listele.no{
-    border: none;
-}
-
 
 @media only screen and (max-width: 1184px) {
+    .nav{
+        justify-content: flex-end;
+    }
     .menu-btn, .menu-btn_burger{
         display: flex;
-    }
-    .nav .logo{   
-        margin-left: 5vw;
     }
     .navitems{
         display: none;
     }
 }
 
-@media only screen and (max-width: 709px) {
-    .contact_tab{
-        display: none;
-    }
-    .nav{
-        top: 0px;
-    }
-    .nav .logo{    
-        transform: scale(0.8);
-    }
-    .phone_mob{
-        display: flex;
-    }
-    .mail_mob{
-        display: flex;
-    }
-}
 
 @media only screen and (max-width: 500px) {
     

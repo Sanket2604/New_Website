@@ -1,0 +1,50 @@
+.s2 .h2, .s3 .h2, .s4 .h2{
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+    transition: 0.75s ease-in;
+    transition-delay: 0.25s;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    font-size: 32px;
+}
+.s2.add_anim .h2, .s3.add_anim .h2, .s4.add_anim .h2{
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+}
+.s2 .lang_cont, .s3 .swipe_, .s4 .m{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.75s ease-in;
+    transition-delay: 0.25s;
+}
+.s2.add_anim .lang_cont, .s3.add_anim .swipe_{
+    transform: translateY(0);
+    opacity: 1;
+}
+.s4.add_anim .m{
+    transform: rotate(-25deg) skew(25deg);
+    opacity: 1;
+}
+.s4 .m:nth-child(2){
+    transition-delay: 0.25s;
+}
+.s4 .m:nth-child(3){
+    transition-delay: 0.5s;
+}
+.s4 .m:nth-child(4){
+    transition-delay: 0.75s;
+}
+.s4 .m:nth-child(5){
+    transition-delay: 1s;
+}
+
+.s2 .b1, .s3 .b1, .s4 .b1{
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s ease-in;
+    transition-delay: 0.75s;
+}
+.s2.add_anim .b1, .s3.add_anim .b1, .s4.add_anim .b1{
+    transform: translate(0);
+    opacity: 1;
+}

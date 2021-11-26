@@ -4,7 +4,24 @@ new fullpage('#fullpage',{
     autoScrolling:true,
     // scrollHorizontally: true
     anchors: ['intro','tech','proj','contact'],
-    navigation:true
+    navigation:true,
+    onLeave: function(origin, destination, direction){
+        if(destination.index===1){
+            document.querySelector('.s2').classList.add('add_anim')
+            document.querySelector('.s3').classList.remove('add_anim')
+            document.querySelector('.s4').classList.remove('add_anim')
+        }
+        if(destination.index===2){
+            document.querySelector('.s3').classList.add('add_anim')
+            document.querySelector('.s2').classList.remove('add_anim')
+            document.querySelector('.s4').classList.remove('add_anim')
+        }
+        if(destination.index===3){
+            document.querySelector('.s4').classList.add('add_anim')
+            document.querySelector('.s2').classList.remove('add_anim')
+            document.querySelector('.s3').classList.remove('add_anim')
+        }
+    }
 })
 
 var mySwiper = new Swiper('.mySwiper',{
@@ -24,7 +41,7 @@ var mySwiper = new Swiper('.mySwiper',{
         delay: 5000,
         disableOnInteraction: true,
     },
-    loop: true
+    loop: true,
 });
 
 function toggleSideBar(){
@@ -52,12 +69,12 @@ let t1 = gsap.timeline({scrollTrigger:{
     trigger:".s1",
     start:"top 50%",
 }})
-.from('.h1', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
-.from('.img1', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
-.from('.l1', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
-.from('.l2', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
-.from('.l3', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
-.from('.download_cont', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.h1', { x: '-50%',  opacity: 0, ease: 'power2'})
+.from('.img1', { x: '+50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l1', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l2', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.l3', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
+.from('.download_cont', { y: '+50%', opacity: 0, ease: 'power2'})
 
 // let t2 = gsap.timeline({scrollTrigger:{
 //     trigger:".s2",

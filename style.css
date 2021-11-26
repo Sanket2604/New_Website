@@ -132,11 +132,6 @@ ul li a span{
     font-size: 16px;
     margin-left: 15px;
 }
-.s2 .heading{
-    font-family: 'Catamaran', sans-serif;
-    text-align: center;
-    font-size: 32px;
-}
 .s2 .container-fluid{
     padding: 0;
     margin-top: 50px;
@@ -202,17 +197,6 @@ ul li a span{
     transform: scale(1.01);
 }
 
-.s3 .heading{
-    font-family: 'Catamaran', sans-serif;
-    text-align: center;
-    font-size: 32px;
-}
-
-.s4 .heading{
-    font-family: 'Catamaran', sans-serif;
-    text-align: center;
-    font-size: 32px;
-}
 .s4 .social{
     display: flex;
     justify-content: center;
@@ -223,7 +207,6 @@ ul li a span{
     height: 60px;
     width: 60px;
     margin: 0 30px;
-    transform: rotate(-25deg) skew(25deg);
     position: relative;
 }
 .s4 .social a span{
@@ -344,7 +327,7 @@ ul li a span{
 }
 
 textarea{
-    margin-top: 5vh;
+    margin-top: 30px;
     width: 600px;
     height: 120px;
     padding: 8px 15px;
@@ -361,8 +344,15 @@ textarea::placeholder{
     color: rgb(226, 226, 226);
 }
 
+.form_cont .msg_cont{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    position: relative;
+}
 .form_cont .msg_btn{
-    margin-top: 20px;
     font-size: 18px;
     border: 2px solid white;
     border-radius: 50px;
@@ -370,10 +360,6 @@ textarea::placeholder{
     cursor: pointer;
     transition: 0.5s ease-in-out;
     margin-right: 15px;
-}
-.form_cont .msg_cont{
-    margin-top: 30px;
-    position: relative;
 }
 .form_cont .msg_btn:hover{
     transform: scale(1.05);
@@ -384,11 +370,8 @@ textarea::placeholder{
 .form_cont .msg_btn i{
     margin-left: 10px;
 }
-.form_cont .msg_cont span:nth-child(2){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(130px, -4px);
+.form_cont .confir{
+    margin-left: 10px;
 }
 .form_cont .msg_cont span:nth-child(2).success{
     color: rgb(81, 255, 81);
@@ -415,6 +398,13 @@ textarea::placeholder{
         height: 200px;
         width: 200px;
     }
+    .s1 .image_cont span{
+        height: 270px;
+        width: 270px;
+    }
+    .form, textarea, .form_cont .msg_cont{
+        width: 95%;
+    }
     .s1 .content_cont .heading{
         margin-top: 30px;
         font-size: 28px;
@@ -422,9 +412,15 @@ textarea::placeholder{
     .s1 .content_cont .content div{
         margin-top: 15px;
         font-size: 18px;
-        text-transform: uppercase;
-        font-family: 'Genos', sans-serif
     }   
+    .s4 .b1{
+        display: none;
+    }
+    .s1 .content_cont .content .download_cont a{
+        font-size: 18px;
+        padding: 7px 30px;
+        border-radius: 50px;
+    }
 }
 @media only screen and (max-width: 500px) {
     .container-fluid{
@@ -434,13 +430,56 @@ textarea::placeholder{
         height: 150px;
         width: 150px;
     }
-    .s1 .content_cont .heading{
-        font-size: 22px;
+    .s1 .image_cont span{
+        height: 170px;
+        width: 170px;
+    }
+    .s1 .content_cont .content .download_cont a{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 7px 30px;
+    }
+    .s1 .content_cont .content .download_cont a i{
+        font-size: 12px;
+        margin-left: 10px;
     }
     .s1 .content_cont .content div{
         margin-top: 15px;
         font-size: 16px;
-        text-transform: uppercase;
-        font-family: 'Genos', sans-serif
-    }   
+    }
+    .form_cont .msg_btn{
+        font-size: 16px;
+        border: 1px solid white;
+        padding: 7px 30px;
+        margin-right: 5px;
+    }
+    .form_cont .confir{
+        font-size: 14px;
+    }
+    .form,
+    .form input:focus + .label-name .content-name,
+    .form input:valid + .label-name .content-name{
+        font-size: 16px;
+    }
+    textarea{
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid white;
+        box-shadow: 0 0 10px rgba(211, 211, 211, 0.1);
+    }
+    .s4 .social{
+        margin-top: 50px;
+    }
+    .s4 .social a{
+        height: 30px;
+        width: 30px;
+        margin: 0 20px;
+    }
+    .s4 .social a span{
+        color: white;
+        background-color: rgba(128, 128, 128, 0.5);
+        font-size: 15px;
+        transition: 0.5s ease-in-out;
+    }
+
 }
