@@ -2,9 +2,11 @@ AOS.init();
 
 new fullpage('#fullpage',{
     autoScrolling:true,
-    // scrollHorizontally: true
+    scrollHorizontally: true,
     anchors: ['intro','tech','proj','contact'],
     navigation:true,
+	slidesNavigation: true,
+	slidesNavPosition: 'bottom',
     onLeave: function(origin, destination, direction){
         if(destination.index===1){
             document.querySelector('.s2').classList.add('add_anim')

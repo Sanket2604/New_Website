@@ -16,7 +16,7 @@ a:hover{
 .section .resume_btn{
     position: absolute;
     bottom: 30px;
-    right: 50px;
+    right: 5vw;
     font-size: 22px;
     border: 1px solid white;
     border-radius: 50%;
@@ -134,8 +134,17 @@ ul li a span{
 }
 .s2 .container-fluid{
     padding: 0;
-    margin-top: 50px;
+    /* padding-top: 80px; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.s2 .h2{
+    margin-bottom: 50px;
+}
+.s2 .col-6,
 .s2 .col-12{
     padding: 0!important;
 }
@@ -379,6 +388,14 @@ textarea::placeholder{
 .form_cont .msg_cont span:nth-child(2).error{
     color: #ff4661;
 }
+.s2 .slide{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.fp-controlArrow, .fp-slidesNav{
+    display: none;
+}
 @media only screen and (max-width: 1000px) {
     .s1 .image_cont .img{
         height: 250px;
@@ -390,7 +407,41 @@ textarea::placeholder{
     .s1 .content_cont .content div{
         margin-top: 15px;
         font-size: 22px;
+    }
+    .s2 .lang_cont.large{
+        display: none;
     }   
+    .s2 .slide{
+        display: flex;
+        padding: 0 5vw;
+    }
+    .s2 .lang{
+        height: 150px;
+    }
+    .s2 .lang .details{
+        margin-bottom: 10px;
+    }
+    .s2 .lang .details i{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .s2 .lang .details img{
+        margin-bottom: 10px;
+        height: 34px;
+    }
+    .s2 .lang .details .name{
+        font-size: 16px;
+    }
+    .s2 .lang .rating span{
+        font-size: 14px;
+    }
+    .s2 .lang .rating i{
+        font-size: 14px;
+    }
+    .fp-slidesNav{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -421,6 +472,14 @@ textarea::placeholder{
         padding: 7px 30px;
         border-radius: 50px;
     }
+    .s2 .h2, .s3 .h2, .s4 .h2{
+        font-size: 28px;
+    }
+    .section .resume_btn{
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+    }
 }
 @media only screen and (max-width: 500px) {
     .container-fluid{
@@ -433,6 +492,10 @@ textarea::placeholder{
     .s1 .image_cont span{
         height: 170px;
         width: 170px;
+    }
+    .s1 .content_cont .heading{
+        margin-top: 50px;
+        font-size: 22px;
     }
     .s1 .content_cont .content .download_cont a{
         font-size: 16px;
@@ -481,5 +544,10 @@ textarea::placeholder{
         font-size: 15px;
         transition: 0.5s ease-in-out;
     }
-
+    .s2 .h2, .s3 .h2, .s4 .h2{
+        font-size: 24px;
+    }
+    .s2 .lang .rating i{
+        font-size: 10px;
+    }
 }
