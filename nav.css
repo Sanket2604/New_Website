@@ -229,6 +229,9 @@ body{
 @media only screen and (max-width: 1184px) {
     .nav{
         justify-content: flex-end;
+        width: 100px;
+        background: transparent;
+        right: 0;
     }
     .menu-btn, .menu-btn_burger{
         display: flex;
