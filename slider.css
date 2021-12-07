@@ -53,7 +53,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(39, 39, 39, 0.5);
 }
 .swiper-slide .slider_card:hover{
   transform: scale(1.01);
