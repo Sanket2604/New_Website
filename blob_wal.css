@@ -412,7 +412,7 @@
     }
 }
 @media only screen and (max-width: 800px) {
-
+    
     .s1_blob_wall .blob1{
         height: 400px;
         width: 400px;
@@ -421,6 +421,30 @@
         height: 100px;
         width: 100px;
     }   
+    .s3_blob_wall .circ1{
+        height: 60vh;
+        width: 60vh;
+    }
+    .s3_blob_wall .circ2{
+        height: 50vh;
+        width: 50vh;
+    }
+    .s3_blob_wall .circ3{
+        height: 40vh;
+        width: 40vh;
+    }
+    .s3_blob_wall .circ4{
+        height: 30vh;
+        width: 30vh;
+    }
+    .s3_blob_wall2 .circ1{
+        height: 9vh;
+        width: 9vh;
+    }
+    .s3_blob_wall2 .circ2{
+        height: 15vh;
+        width: 15vh;
+    }
     .s4_blob_wall span{
         height: 50px;
         width: 50px;
