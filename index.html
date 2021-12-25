@@ -463,20 +463,20 @@
                 <div class="row ">
                     <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                         <div class="form">
-                            <input style="color:white" type="text" class="inp" name="name" autocomplete="off" required />
+                            <input style="color:white" type="text" class="inp" id="n" name="name" autocomplete="off" required />
                             <label for="name" class="label-name">
                                 <span class="content-name">Name</span>
                             </label>                  
                         </div>
                         <div class="form">
-                            <input style="color:white" type="number" class="inp" name="phone" autocomplete="off" required />
+                            <input style="color:white" type="text" class="inp" id="e" name="email" autocomplete="off" required />
                             <label for="name" class="label-name">
-                                <span class="content-name">Phone Number</span>
+                                <span class="content-name">Email</span>
                             </label>                           
                         </div>
-                        <textarea placeholder="Message"></textarea>
+                        <textarea id="t" placeholder="Message"></textarea>
                         <div class="msg_cont">  
-                            <div class="msg_btn">Send<i class="fas fa-paper-plane"></i></div>
+                            <div class="msg_btn" onclick="submit()">Send<i class="fas fa-paper-plane"></i></div>
                             <div class="confir"><span class="msg">Message Sent</span> <i class="far fa-check-circle"></i></div>
                         </div>
                     </div>
@@ -490,13 +490,6 @@
                     <span></span>
                     <span class="fas fa-mobile"></span>
                 </a>
-                <a class="m" href="mailto:umaymailme2604@gmail.com">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fas fa-envelope"></span>
-                </a>
                 <a class="m" href="https://wa.me//919900803562">
                     <span></span>
                     <span></span>
@@ -504,12 +497,12 @@
                     <span></span>
                     <span class="fab fa-whatsapp"></span>
                 </a>
-                <a class="m" href="https://www.instagram.com/sanket.i.am/">
+                <a class="m" href="mailto:umaymailme2604@gmail.com">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    <span class="fab fa-instagram"></span>
+                    <span class="fas fa-envelope"></span>
                 </a>
                 <a class="m" href="https://www.linkedin.com/in/sb2604/">
                     <span></span>
@@ -517,6 +510,13 @@
                     <span></span>
                     <span></span>
                     <span class="fab fa-linkedin-in"></span>
+                </a>
+                <a class="m" href="https://github.com/Sanket2604">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-github"></span>
                 </a>
             </div>
         </div>
@@ -531,6 +531,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

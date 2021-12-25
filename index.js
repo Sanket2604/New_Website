@@ -1,5 +1,3 @@
-AOS.init();
-
 new fullpage('#fullpage',{
     autoScrolling:true,
     scrollHorizontally: true,
@@ -64,8 +62,48 @@ function sideBarClose(){
     document.querySelector('.backdrop').classList.remove('back');
 }
 
+function submit(){
+    const cname = document.getElementById('n').value
+    const email = document.getElementById('e').value
+    const text = document.getElementById('t').value
 
-
+    if( cname !== '' && email !== '' && text!== ''){
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+            console.log("Hello There")
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username : "lastknight2604@gmail.com",
+                Password : "pLp,t#5[2Lv:{QY'O6~c`Al}E*ZT7-",
+                To : "sanketbanerjee10@gmail.com",
+                From : "lastknight2604@gmail.com",
+                Subject : "New Message",
+                Body : "<b>Name: </b>"+cname+
+                        "<br><br><b>Email: </b>"+email+
+                        "<br><br><b>Message: </b> <br> "+text
+                }).then(function(response){
+                    console.log(response)                    
+                    document.querySelector('.confir').classList.toggle('active')
+                    setTimeout(()=>{
+                        document.querySelector('.confir').classList.toggle('active')
+                    }, 5000)
+            });
+        }
+        else{
+            alert("Please enter a valid email address")
+        }
+    }
+    else{
+        if(cname === ''){
+            alert("Please Enter Your Name")
+        }
+        else if(email === ''){
+            alert("Please Enter Your Email Id")
+        }
+        else if(text === ''){
+            alert("Please Enter Your Message")
+        }
+    }
+}
 
 let t1 = gsap.timeline({scrollTrigger:{
     trigger:".s1",
@@ -77,10 +115,3 @@ let t1 = gsap.timeline({scrollTrigger:{
 .from('.l2', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
 .from('.l3', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
 .from('.download_cont', { y: '+50%', opacity: 0, ease: 'power2'})
-
-// let t2 = gsap.timeline({scrollTrigger:{
-//     trigger:".s2",
-//     start:"top 50%",
-// }})
-// .from('.h2', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
-// .from('.lang', { y: '10px', opacity: 0, ease: 'power2'})
