@@ -9,25 +9,25 @@
     width: 100%;
 }
 .s1_blob_wall .blob1{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 
     height: 800px;
     width: 800px;
     transform: translate(-50%, -50%);
-    background-color: rgba(68, 68, 68, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
     animation: imgblob 40s linear infinite;
 }
 .s1_blob_wall .blob2{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
 
     height: 200px;
     width: 200px;
-    transform: translate(40%, 40%);
-    background-color: rgba(68, 68, 68, 0.15);
+    transform: translate(40%, 0%);
+    background-color: rgba(255, 255, 255, 0.05);
     animation: imgblob 40s linear infinite;
 }
 @keyframes imgblob {
@@ -71,9 +71,7 @@
     left: 0;
     right: 0;
     display: flex;;
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
 }
 .s2_blob_wall .circ{
     position: absolute;
@@ -84,10 +82,10 @@
 }
 @keyframes orbit{
     from{
-        transform: translate(-50%,-50%) rotateZ(0deg);
+        transform: translate(-50%,-50%) rotateZ(-150deg);
     }
     to{
-        transform: translate(-50%,-50%) rotateZ(110deg);
+        transform: translate(-50%,-50%) rotateZ(120deg);
     }
 }
 .s2_blob_wall .circ .planet{
@@ -123,7 +121,7 @@
 .s2_blob_wall .circ2{
     height: 80px;
     width: 80px;
-    animation-duration: 4s;
+    animation-duration: 8s;
 }
 .s2_blob_wall .circ2 .planet{
     height: 5px;
@@ -133,7 +131,7 @@
 .s2_blob_wall .circ3{
     height: 100px;
     width: 100px;
-    animation-duration: 7s;
+    animation-duration: 14s;
 }
 .s2_blob_wall .circ3 .planet{
     height: 6px;
@@ -143,7 +141,7 @@
 .s2_blob_wall .circ4{
     height: 120px;
     width: 120px;
-    animation-duration: 8s;
+    animation-duration: 16s;
 }
 .s2_blob_wall .circ4 .planet{
     height: 7px;
@@ -153,7 +151,7 @@
 .s2_blob_wall .circ5{
     height: 140px;
     width: 140px;
-    animation-duration: 10s;
+    animation-duration: 18s;
 }
 .s2_blob_wall .circ5 .planet{
     height: 7px;
@@ -163,7 +161,7 @@
 .s2_blob_wall .circ6{
     height: 180px;
     width: 180px;
-    animation-duration: 20s;
+    animation-duration: 25s;
 }
 .s2_blob_wall .circ6 .planet{
     height: 12px;
@@ -173,7 +171,7 @@
 .s2_blob_wall .circ7{
     height: 205px;
     width: 205px;
-    animation-duration: 25s;
+    animation-duration: 30s;
 }
 .s2_blob_wall .circ7 .planet{
     height: 10px;
@@ -183,7 +181,7 @@
 .s2_blob_wall .circ8{
     height: 230px;
     width: 230px;
-    animation-duration: 30s;
+    animation-duration: 35s;
 }
 .s2_blob_wall .circ8 .planet{
     height: 9px;
@@ -193,40 +191,12 @@
 .s2_blob_wall .circ9{
     height: 255px;
     width: 255px;
-    animation-duration: 35s;
+    animation-duration: 40s;
 }
 .s2_blob_wall .circ9 .planet{
     height: 9px;
     width: 9px;
     background-color: #4b70dd;
-}
-.s2_blob_wall .circ10{
-    height: 290px;
-    animation: 10s orbit_pluto linear infinite;
-}
-.s2_blob_wall .circ10 .planet{
-    height: 5px;
-    width: 5px;
-    background-color: #9ca6b7;
-}
-@keyframes orbit_pluto{
-    0%{
-        width: 100px;
-        transform: translate(-50%,-50%) rotateZ(0deg);
-    }
-    40%{
-        width: 260px;
-    }
-    50%{
-        width: 290px;
-    }
-    60%{
-        width: 260px;
-    }
-    100%{
-        width: 100px;
-        transform: translate(-50%,-50%) rotateZ(110deg);
-    }
 }
 
 .s3_blob_wall{
@@ -236,8 +206,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;;
-    height: 100vh;
+    display: flex;
     width: 100%;
     overflow: hidden;
 }
@@ -250,13 +219,13 @@
     animation: 40s circle_expand linear infinite;
 }
 .s3_blob_wall .circ1{
-    height: 100vh;
-    width: 100vh;
+    height: 80vh;
+    width: 80vh;
     background-color: rgba(0, 183, 255, 0.1);
 }
 .s3_blob_wall .circ2{
-    height: 75vh;
-    width: 75vh;
+    height: 65vh;
+    width: 65vh;
     background-color: rgba(0, 183, 255, 0.2);
 }
 .s3_blob_wall .circ3{
@@ -265,8 +234,8 @@
     background-color: rgba(41, 159, 206, 0.3);
 }
 .s3_blob_wall .circ4{
-    height: 25vh;
-    width: 25vh;
+    height: 35vh;
+    width: 35vh;
     background-color: rgba(255, 255, 255, 0.2);
 }
 @keyframes circle_expand{
@@ -305,35 +274,38 @@
     border-radius: 100%;
     transform: translate(-50%,-50%);
     animation: 30s circle_expand2 alternate infinite;
+    overflow: visible;
 }
 .s3_blob_wall2 .circ1{
-    height: 20vh;
-    width: 20vh;
+    height: 10vh;
+    width: 10vh;
     background-color: rgba(122, 217, 255, 0.1);
 }
 .s3_blob_wall2 .circ2{
-    height: 30vh;
-    width: 30vh;
+    height: 15vh;
+    width: 15vh;
     background-color: rgba(41, 159, 206, 0.2);
 }
 @keyframes circle_expand2{
     0%{ 
-        transform: translate(-50%,-50%) scale(1);        
+        transform: translate(0%,0%) scale(1.1);        
     }
     25%{
-        transform: translate(50%,50%) scale(0.75);        
+        transform: translate(-200px,200px) scale(1.5);        
     }
     50%{
-        transform: translate(-60%,50%) scale(1);        
+        transform: translate(0px,200px) scale(1);        
     }
     75%{
-        transform: translate(50%,-50%) scale(1.25);
+        transform: translate(-200px,0%) scale(1.75);
     }
     100%{
-        transform: translate(-50%,-50%) scale(1);
+        transform: translate(0%,0%) scale(1.1);
     }
 }
-
+.s4 .heading{
+    text-align: center;
+}
 .s4_blob_wall{
     position: absolute;
     z-index: 1;
@@ -343,6 +315,7 @@
     right: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .s4_blob_wall span{
     position: absolute;
