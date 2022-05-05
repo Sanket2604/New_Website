@@ -1,49 +1,3 @@
-new fullpage('#fullpage',{
-    autoScrolling:true,
-    scrollHorizontally: true,
-    anchors: ['intro','tech','proj','contact'],
-    navigation:true,
-	slidesNavigation: true,
-	slidesNavPosition: 'bottom',
-    onLeave: function(origin, destination, direction){
-        if(destination.index===1){
-            document.querySelector('.s2').classList.add('add_anim')
-            document.querySelector('.s3').classList.remove('add_anim')
-            document.querySelector('.s4').classList.remove('add_anim')
-        }
-        if(destination.index===2){
-            document.querySelector('.s3').classList.add('add_anim')
-            document.querySelector('.s2').classList.remove('add_anim')
-            document.querySelector('.s4').classList.remove('add_anim')
-        }
-        if(destination.index===3){
-            document.querySelector('.s4').classList.add('add_anim')
-            document.querySelector('.s2').classList.remove('add_anim')
-            document.querySelector('.s3').classList.remove('add_anim')
-        }
-    }
-})
-
-var mySwiper = new Swiper('.mySwiper',{
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    disableOnInteraction: true,
-    coverflowEffect: {
-        rotate: 10,
-        stretch: 0,
-        depth: 200,
-        modifier: 1,
-        slideShadows: false,
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-    },
-    loop: true,
-});
-
 function toggleSideBar(){
     const menuBtn = document.querySelector('.menu-btn');
     if(menuBtn.classList.contains('open')) {
@@ -105,7 +59,7 @@ function submit(){
     }
 }
 
-let t1 = gsap.timeline({scrollTrigger:{
+gsap.timeline({scrollTrigger:{
     trigger:".s1",
     start:"top 50%",
 }})
@@ -115,3 +69,27 @@ let t1 = gsap.timeline({scrollTrigger:{
 .from('.l2', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
 .from('.l3', { x: '-50%', y: '-50%', opacity: 0, ease: 'power2'})
 .from('.download_cont', { y: '+50%', opacity: 0, ease: 'power2'})
+
+gsap.timeline({scrollTrigger:{
+    trigger:".s2",
+    start:"top 50%",
+}})
+.from('.h2', { y: '-50%',  opacity: 0, ease: 'power2'})
+.from('.lang', { duration: 0.25, y: '50px',opacity: 0, ease: 'power2', stagger: 0.1})
+
+gsap.timeline({scrollTrigger:{
+    trigger:".s3",
+    start:"top 50%",
+}})
+.from('.h3', { y: '-50%',  opacity: 0, ease: 'power2'})
+.from('.project_card', { duration: 0.25, y: '50px',opacity: 0, ease: 'power2', stagger: 0.1})
+
+gsap.timeline({scrollTrigger:{
+    trigger:".s4",
+    start:"top 50%",
+}})
+.from('.h4', { y: '-50%',  opacity: 0, ease: 'power2'})
+.from('.form', { duration: 0.25, x: '-50px',opacity: 0, ease: 'power2', stagger: 0.1})
+.from('.t', { duration: 0.25, x: '-50px',opacity: 0, ease: 'power2'})
+.from('.msg_btn', { duration: 0.25, x: '-50px',opacity: 0, ease: 'power2'})
+.from('.m', { duration: 0.25, y: '50px',opacity: 0, ease: 'power2', stagger: 0.1})
